@@ -27,6 +27,10 @@ public class MinaServerConfig extends BaseServerConfig{
 	@Element(required=false)
 	private String url;
 	
+	//mina 服务器线程池大小
+	@Element(required=false)
+	private int orderedThreadPoolExecutorSize=300;
+	
 	//tcp没有延迟
 	@Element(required=false)
 	private boolean tcpNoDelay=true;
@@ -156,6 +160,14 @@ public class MinaServerConfig extends BaseServerConfig{
 
 	public void setMaxCountPerSecond(int maxCountPerSecond) {
 		this.maxCountPerSecond = maxCountPerSecond;
+	}
+
+	public int getOrderedThreadPoolExecutorSize() {
+		return orderedThreadPoolExecutorSize;
+	}
+
+	public void setOrderedThreadPoolExecutorSize(int orderedThreadPoolExecutorSize) {
+		this.orderedThreadPoolExecutorSize = orderedThreadPoolExecutorSize;
 	}
 	
 	

@@ -43,7 +43,7 @@ public abstract class DefaultProtocolHandler implements IoHandler{
 	}
 	
 	@Override
-	public void sessionOpened(IoSession session) throws Exception {
+	public void sessionOpened(IoSession session){
 		if(logger.isWarnEnabled()) {
 			logger.warn("已经打开连接{}",session);
 		}

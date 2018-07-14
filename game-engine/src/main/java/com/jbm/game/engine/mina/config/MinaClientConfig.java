@@ -28,7 +28,7 @@ public class MinaClientConfig extends BaseServerConfig{
 	
 	//连接配置
 	@Element(required=false)
-	private MinaClientConfig connTo;
+	private MinaClienConnToConfig connTo;
 	
 	//当前服务器的类型，如果当前服务器是gameserver,那么对应ServerType.GameServer
 	@Element(required=false)
@@ -62,13 +62,6 @@ public class MinaClientConfig extends BaseServerConfig{
 		this.maxConnectCount = maxConnectCount;
 	}
 
-	public MinaClientConfig getConnTo() {
-		return connTo;
-	}
-
-	public void setConnTo(MinaClientConfig connTo) {
-		this.connTo = connTo;
-	}
 
 	public ServerType getType() {
 		return type;
@@ -86,13 +79,23 @@ public class MinaClientConfig extends BaseServerConfig{
 		this.info = info;
 	}
 	
+	
+	public MinaClienConnToConfig getConnTo() {
+		return connTo;
+	}
+
+	public void setConnTo(MinaClienConnToConfig connTo) {
+		this.connTo = connTo;
+	}
+
+
 	/**
 	 * 连接配置
 	 * @author JiangBangMing
 	 *
 	 * 2018年7月4日 下午9:34:51
 	 */
-	public static class MinaClientConnToConfig extends BaseServerConfig{
+	public static class MinaClienConnToConfig extends BaseServerConfig{
 		
 		@Element(required=true)
 		private ServerType type=ServerType.GATE;
@@ -125,7 +128,7 @@ public class MinaClientConfig extends BaseServerConfig{
 				return false;
 			}
 			
-			final MinaClientConnToConfig other=(MinaClientConnToConfig)obj;
+			final MinaClienConnToConfig other=(MinaClienConnToConfig)obj;
 			if(this.type!=other.getType()) {
 				return false;
 			}
