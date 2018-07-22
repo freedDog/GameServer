@@ -132,7 +132,7 @@ public class MinaUdpClient implements Runnable{
 		DatagramSessionConfig sc=this.connector.getSessionConfig();
 		maxConnectCount=minaClientConfig.getMaxConnectCount();
 		sc.setReceiveBufferSize(minaClientConfig.getReceiveBufferSize());
-		sc.setSendBufferSize(minaClientConfig.getSendBufferSizze());
+		sc.setSendBufferSize(minaClientConfig.getSendBufferSize());
 		sc.setMaxReadBufferSize(minaClientConfig.getMaxReadSize());
 		this.factory.getDecoder().setMaxReadSize(minaClientConfig.getMaxReadSize());
 	}

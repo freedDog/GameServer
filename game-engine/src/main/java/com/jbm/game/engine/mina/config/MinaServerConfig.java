@@ -45,7 +45,7 @@ public class MinaServerConfig extends BaseServerConfig{
 	
 	//写入空闲时间检测
 	@Element(required=false)
-	private int writeIdleTime=120;
+	private int writerIdleTime=120;
 	
 	@Element(required=false)
 	private int soLinger=0;
@@ -113,13 +113,13 @@ public class MinaServerConfig extends BaseServerConfig{
 	public void setReaderIdleTime(int readerIdleTime) {
 		this.readerIdleTime = readerIdleTime;
 	}
-
-	public int getWriteIdleTime() {
-		return writeIdleTime;
+	
+	public int getWriterIdleTime() {
+		return writerIdleTime;
 	}
 
-	public void setWriteIdleTime(int writeIdleTime) {
-		this.writeIdleTime = writeIdleTime;
+	public void setWriterIdleTime(int writerIdleTime) {
+		this.writerIdleTime = writerIdleTime;
 	}
 
 	public int getSoLinger() {

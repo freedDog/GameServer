@@ -1,9 +1,7 @@
 package com.jbm.game.engine.mina;
 
-import java.awt.RenderingHints.Key;
 import java.net.InetSocketAddress;
 import java.util.Map;
-
 import org.apache.mina.core.filterchain.DefaultIoFilterChainBuilder;
 import org.apache.mina.core.filterchain.IoFilter;
 import org.apache.mina.core.service.IoHandler;
@@ -16,7 +14,6 @@ import org.apache.mina.transport.socket.SocketSessionConfig;
 import org.apache.mina.transport.socket.nio.NioSocketAcceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.jbm.game.engine.mina.code.DefaultProtocolCodecFactory;
 import com.jbm.game.engine.mina.code.ProtocolCodecFactoryImpl;
 import com.jbm.game.engine.mina.config.MinaServerConfig;
@@ -118,17 +115,17 @@ public class TcpServer implements Runnable{
 				SocketSessionConfig sc=acceptor.getSessionConfig();
 				sc.setReuseAddress(minaServerConfig.isReuseAddress());
 				sc.setReceiveBufferSize(minaServerConfig.getReceiveBufferSize());
-				sc.setSendBufferSize(minaServerConfig.getSendBufferSizze());
+				sc.setSendBufferSize(minaServerConfig.getSendBufferSize());
 				sc.setTcpNoDelay(minaServerConfig.isTcpNoDelay());
 				sc.setSoLinger(minaServerConfig.getSoLinger());
 				sc.setIdleTime(IdleStatus.READER_IDLE, minaServerConfig.getReaderIdleTime());
-				sc.setIdleTime(IdleStatus.WRITER_IDLE, minaServerConfig.getWriteIdleTime());
+				sc.setIdleTime(IdleStatus.WRITER_IDLE, minaServerConfig.getWriterIdleTime());
 				
 				acceptor.setHandler(ioHandler);
 				
 				try {
 					acceptor.bind(new InetSocketAddress(minaServerConfig.getPort()));
-					logger.info("已经该是端口TCP 端口:{}",minaServerConfig.getPort());
+					logger.info("已开始监听TCP 端口:{}",minaServerConfig.getPort());
 				}catch (Exception e) {
 					logger.error("监听TCP端口:{}已被占用",minaServerConfig.getPort());
 					logger.error("TCP 服务异常",e);

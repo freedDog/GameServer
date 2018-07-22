@@ -27,5 +27,6 @@
   <modules>
     <module>game-gate</module>
    	<module>game-engine</module>
+    <module>game-manage</module>
   </modules>
 </project>

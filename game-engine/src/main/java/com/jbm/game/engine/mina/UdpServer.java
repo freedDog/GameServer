@@ -89,9 +89,9 @@ public class UdpServer implements Runnable{
 				DatagramSessionConfig dc=acceptor.getSessionConfig();
 				dc.setReuseAddress(minaServerConfig.isReuseAddress());
 				dc.setReceiveBufferSize(minaServerConfig.getReceiveBufferSize());
-				dc.setSendBufferSize(minaServerConfig.getSendBufferSizze());
+				dc.setSendBufferSize(minaServerConfig.getSendBufferSize());
 				dc.setIdleTime(IdleStatus.READER_IDLE, minaServerConfig.getReaderIdleTime());
-				dc.setIdleTime(IdleStatus.WRITER_IDLE, minaServerConfig.getWriteIdleTime());
+				dc.setIdleTime(IdleStatus.WRITER_IDLE, minaServerConfig.getWriterIdleTime());
 				dc.setBroadcast(true);
 				dc.setCloseOnPortUnreachable(true);
 				

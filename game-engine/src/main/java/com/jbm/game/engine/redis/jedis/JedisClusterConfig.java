@@ -3,6 +3,7 @@ package com.jbm.game.engine.redis.jedis;
 import java.util.HashSet;
 
 import org.simpleframework.xml.Element;
+import org.simpleframework.xml.ElementList;
 
 /**
  * redis 集群配置文件
@@ -12,7 +13,7 @@ import org.simpleframework.xml.Element;
  */
 public class JedisClusterConfig {
 
-	@Element(required=false)
+	@ElementList(required=false)
 	private HashSet<JedisClusterNodesConfig> nodes=new HashSet<>();
 	@Element(required=true)
 	private int poolMaxTotal=500;

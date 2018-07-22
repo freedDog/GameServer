@@ -35,7 +35,7 @@ public abstract class BaseServerConfig {
 	
 	//发送数据缓冲大小
 	@Element(required=false)
-	protected int sendBufferSizze=1048576;
+	protected int sendBufferSize=1048576;
 	
 	//接收数据最大字节数
 	@Element(required=false)
@@ -110,12 +110,13 @@ public abstract class BaseServerConfig {
 		this.receiveBufferSize = receiveBufferSize;
 	}
 
-	public int getSendBufferSizze() {
-		return sendBufferSizze;
+	
+	public int getSendBufferSize() {
+		return sendBufferSize;
 	}
 
-	public void setSendBufferSizze(int sendBufferSizze) {
-		this.sendBufferSizze = sendBufferSizze;
+	public void setSendBufferSize(int sendBufferSize) {
+		this.sendBufferSize = sendBufferSize;
 	}
 
 	public int getMaxReadSize() {

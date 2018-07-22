@@ -96,11 +96,11 @@ public class HttpServer implements Runnable{
 			SocketSessionConfig sc=acceptor.getSessionConfig();
 			sc.setReuseAddress(minaServerConfig.isReuseAddress());
 			sc.setReceiveBufferSize(minaServerConfig.getMaxReadSize());
-			sc.setSendBufferSize(minaServerConfig.getSendBufferSizze());
+			sc.setSendBufferSize(minaServerConfig.getSendBufferSize());
 			sc.setTcpNoDelay(minaServerConfig.isTcpNoDelay());
 			sc.setSoLinger(minaServerConfig.getSoLinger());
 			sc.setIdleTime(IdleStatus.READER_IDLE,minaServerConfig.getReaderIdleTime());
-			sc.setIdleTime(IdleStatus.WRITER_IDLE, minaServerConfig.getWriteIdleTime());
+			sc.setIdleTime(IdleStatus.WRITER_IDLE, minaServerConfig.getWriterIdleTime());
 			
 			acceptor.setHandler(ioHandler);
 			try {
