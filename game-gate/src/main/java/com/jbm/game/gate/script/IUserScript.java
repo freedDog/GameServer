@@ -3,7 +3,7 @@ package com.jbm.game.gate.script;
 import org.apache.mina.core.session.IoSession;
 
 import com.jbm.game.engine.script.IScript;
-import com.jbm.game.gate.struct.Reason;
+import com.jbm.game.model.constant.Reason;
 
 /**
  * 用户接口

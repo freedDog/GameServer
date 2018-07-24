@@ -29,7 +29,7 @@ public abstract class AbsMongoManager {
 		}
 		
 		MongoClientURI uri=new MongoClientURI(mongoClientConfig.getUrl());
-		mongoClient=new MongoClient();
+		mongoClient=new MongoClient(uri);
 		morphia=new Morphia();
 		morphia.mapPackage("");
 		

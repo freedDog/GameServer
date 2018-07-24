@@ -1,0 +1,334 @@
+2018-07-24 12:54:09 SysUtil.java:41 - [ ERROR ] com.jbm.game.cluster.StartCluster
+2018-07-24 12:54:20 SysUtil.java:41 - [ ERROR ] com.jbm.game.cluster.StartCluster
+2018-07-24 12:55:17 SysUtil.java:41 - [ ERROR ] com.jbm.game.cluster.StartCluster
+2018-07-24 12:56:28 SysUtil.java:41 - [ ERROR ] com.jbm.game.engine.mina.HttpServer$BindServer
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8001
+original message : Address already in use: bind
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:586)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:71)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:454)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 12:56:36 SysUtil.java:41 - [ ERROR ] com.jbm.game.engine.mina.HttpServer$BindServer
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8001
+original message : Address already in use: bind
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:586)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:71)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:454)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 12:57:14 SysUtil.java:41 - [ ERROR ] com.jbm.game.engine.mina.HttpServer$BindServer
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8001
+original message : Address already in use: bind
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:586)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:71)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:454)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 13:27:08 SysUtil.java:41 - [ ERROR ] com.jbm.game.cluster.server.ClusterServer
+2018-07-24 13:29:46 SysUtil.java:41 - [ ERROR ] com.jbm.game.cluster.server.ClusterServer
+2018-07-24 17:42:03 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:42:04 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:42:13 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:42:44 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:42:45 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:42:55 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:43:05 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:43:15 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:43:25 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:43:35 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:43:45 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:43:55 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:44:05 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:44:15 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:44:25 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:44:35 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:44:45 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:44:55 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:45:05 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:45:15 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:45:25 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.RuntimeException: 服务器配置未实现
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:45:35 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.ClassCastException: com.jbm.game.engine.mina.config.MinaClientConfig cannot be cast to com.jbm.game.engine.mina.config.MinaServerConfig
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:89)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:50)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:45:49 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:45:49 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.ClassCastException: com.jbm.game.engine.mina.config.MinaClientConfig cannot be cast to com.jbm.game.engine.mina.config.MinaServerConfig
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:89)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:50)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:45:59 ScheduledTask.java:72 - [ ERROR ] 定时任务
+java.lang.ClassCastException: com.jbm.game.engine.mina.config.MinaClientConfig cannot be cast to com.jbm.game.engine.mina.config.MinaServerConfig
+	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:89)
+	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:50)
+	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:46:37 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-24 17:49:07 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000001: nio socket, client, /127.0.0.1:19459 => /127.0.0.1:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。

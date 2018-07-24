@@ -19,6 +19,8 @@ public enum ServerType {
     PAY(6),
     /**大厅*/
     HALL(7),
+    /**捕鱼达人*/
+    GAME_BYDR(101),
     ;
     
 	public static ServerType valueof(int type) {

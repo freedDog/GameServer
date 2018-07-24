@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import com.google.protobuf.Message;
 import com.jbm.game.engine.script.ScriptManager;
 import com.jbm.game.gate.script.IUserScript;
-import com.jbm.game.gate.struct.Reason;
 import com.jbm.game.gate.struct.UserSession;
+import com.jbm.game.model.constant.Reason;
 
 /**
  * 用户连接会话管理类

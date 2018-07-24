@@ -4,7 +4,6 @@ import org.apache.mina.core.session.IdleStatus;
 import org.apache.mina.core.session.IoSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.jbm.game.engine.mina.config.MinaServerConfig;
 import com.jbm.game.engine.mina.handler.DefaultProtocolHandler;
 import com.jbm.game.engine.script.ScriptManager;
@@ -13,8 +12,8 @@ import com.jbm.game.engine.server.Service;
 import com.jbm.game.engine.util.MsgUtil;
 import com.jbm.game.gate.script.IUserScript;
 import com.jbm.game.gate.struct.Config;
-import com.jbm.game.gate.struct.Reason;
 import com.jbm.game.gate.struct.UserSession;
+import com.jbm.game.model.constant.Reason;
 
 /**
  * websocket 消息处理器

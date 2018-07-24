@@ -12,6 +12,9 @@ import com.jbm.game.engine.server.ServerState;
 import com.jbm.game.engine.server.ServerType;
 import com.jbm.game.engine.util.StringUtils;
 import com.jbm.game.gate.struct.UserSession;
+import com.jbm.game.message.ServerMessage;
+import com.jbm.game.message.system.SystemMessage.SystemErrorCode;
+import com.jbm.game.message.system.SystemMessage.SystemErrorResponse;
 
 /**
  * 服务器管理类
@@ -56,8 +59,33 @@ public class ServerManager {
 	/**
 	 * 更新服务器
 	 */
-	public void updateServerInfo() {
-		// TODO 暂时不实现，等消息生成时在处理
+	public void updateServerInfo(ServerMessage.ServerInfo info) {
+		if(info.getType()<100&&info.getType()!=ServerType.HALL.ordinal()) {
+			//游戏服从101开始定义
+			//大厅服需要更新
+			return;
+		}
+		ServerType serverType=ServerType.valueof(info.getType());
+		ServerInfo serverInfo=getGameServerInfo(serverType, info.getId());
+		if(serverInfo==null) {
+			serverInfo=new ServerInfo();
+			serverInfo.setId(info.getId());
+		}
+		serverInfo.setIp(info.getIp());
+		serverInfo.setPort(info.getPort());
+		serverInfo.setOnline(info.getOnline());
+		serverInfo.setMaxUserCount(info.getMaxUserCount());
+		serverInfo.setName(info.getName());
+		serverInfo.setHttpPort(info.getHttpport());
+		serverInfo.setState(info.getState());
+		serverInfo.setType(info.getType());
+		serverInfo.setWwwip(info.getWwwip());
+		
+		if(!serverMap.containsKey(serverType)) {
+			serverMap.put(serverType, new ConcurrentHashMap<>());
+		}
+		serverMap.get(serverType).put(serverInfo.getId(), serverInfo);
+		logger.info("游戏服务器{}注册更新到网关服务器",serverInfo.toString());
 	}
 	/**
 	 * h获取空闲的游戏服务器
@@ -80,8 +108,15 @@ public class ServerManager {
 		}
 		return null;
 	}
-	// TODO 在不实现 等消息生成完成时处理
-	public void buildSystemErrorResponse() {
-		
+	/**
+	 * 构建错误消息
+	 */
+	public SystemErrorResponse buildSystemErrorResponse(SystemErrorCode errorCode,String msg) {
+		SystemErrorResponse.Builder builder=SystemErrorResponse.newBuilder();
+		builder.setErrorCode(errorCode);
+		if(msg!=null) {
+			builder.setMsg(msg);
+		}
+		return builder.build();
 	}
 }

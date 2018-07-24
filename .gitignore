@@ -3,6 +3,7 @@
 # Project Files
 .idea
 logs
+log
 target
 *.iml
 build
@@ -11,6 +12,7 @@ bin
 .settings
 *.mf
 .project
+*.log
 
 # Package Files #
 *.jar

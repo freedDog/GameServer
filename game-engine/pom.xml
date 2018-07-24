@@ -55,6 +55,12 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
+				<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
 		<!-- redisson 添加了netty -->
 		<!-- <dependency> <groupId>io.netty</groupId> <artifactId>netty-all</artifactId> 
@@ -64,6 +70,7 @@
 			<artifactId>mina-http</artifactId>
 			<version>2.0.16</version>
 		</dependency>
+		
   		<dependency>
 			<groupId>org.apache.mina</groupId>
 			<artifactId>mina-core</artifactId>

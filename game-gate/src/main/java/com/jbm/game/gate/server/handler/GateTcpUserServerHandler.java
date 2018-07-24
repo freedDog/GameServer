@@ -14,8 +14,8 @@ import com.jbm.game.engine.util.MsgUtil;
 import com.jbm.game.gate.script.IUserScript;
 import com.jbm.game.gate.server.ssl.GateSslContextFactory;
 import com.jbm.game.gate.struct.Config;
-import com.jbm.game.gate.struct.Reason;
 import com.jbm.game.gate.struct.UserSession;
+import com.jbm.game.model.constant.Reason;
 
 /**
  * 大厅tcp 消息处理器

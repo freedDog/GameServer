@@ -32,7 +32,7 @@ public class ServerInfo {
 	//地址
 	private String ip;
 	//外网地址
-	private int wwwip;
+	private String wwwip;
 	//端口
 	private int port;
 	//当前状态  1 表示维护, 0 表示正常
@@ -202,11 +202,11 @@ public class ServerInfo {
 		this.ip = ip;
 	}
 
-	public int getWwwip() {
+	public String getWwwip() {
 		return wwwip;
 	}
 
-	public void setWwwip(int wwwip) {
+	public void setWwwip(String wwwip) {
 		this.wwwip = wwwip;
 	}
 

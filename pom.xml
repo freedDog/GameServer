@@ -28,5 +28,10 @@
     <module>game-gate</module>
    	<module>game-engine</module>
     <module>game-manage</module>
+    <module>game-message</module>
+    <module>game-hall</module>
+    <module>game-model</module>
+    <module>game-cluster</module>
+    <module>game-gate-scripts</module>
   </modules>
 </project>
