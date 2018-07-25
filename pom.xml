@@ -33,5 +33,7 @@
     <module>game-model</module>
     <module>game-cluster</module>
     <module>game-gate-scripts</module>
+    <module>game-cluster-scripts</module>
+    <module>game-hall-scripts</module>
   </modules>
 </project>

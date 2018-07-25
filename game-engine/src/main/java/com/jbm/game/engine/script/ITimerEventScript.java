@@ -17,15 +17,24 @@ public interface ITimerEventScript extends IScript{
 	default void secondHandler(LocalTime localTime) {
 		
 	}
-	
+	/**
+	 * 每分钟执行
+	 * @param localTime
+	 */
 	default void minuteHandler(LocalTime localTime) {
 		
 	}
-	
+	/**
+	 * 每小时执行
+	 * @param localTime
+	 */
 	default void hourHandler(LocalTime localTime) {
 		
 	}
-	
+	/**
+	 * 每天执行
+	 * @param localTime
+	 */
 	default void dayHandler(LocalTime localTime) {
 		
 	}

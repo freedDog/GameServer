@@ -17,17 +17,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
-
 import javax.tools.DiagnosticCollector;
 import javax.tools.JavaCompiler;
 import javax.tools.JavaFileObject;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
-
-import org.omg.CORBA.TCKind;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.jbm.game.engine.handler.HandlerEntity;
 import com.jbm.game.engine.handler.HttpHandler;
 import com.jbm.game.engine.handler.IHandler;
@@ -247,7 +243,7 @@ public final class ScriptPool {
 				options.add("1.8");
 				options.add("-encoding");
 				options.add("UTF-8");
-				options.add("-sourcepaht");
+				options.add("-sourcepath");
 				options.add(this.sourceDir);//指定文件目录
 				options.add("-d");
 				options.add(this.outDir);//指定输出目录

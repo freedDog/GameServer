@@ -10,6 +10,7 @@ import com.jbm.game.engine.redis.jedis.JedisPubListener;
 import com.jbm.game.engine.server.ServerState;
 import com.jbm.game.engine.thread.ThreadPoolExecutorConfig;
 import com.jbm.game.engine.util.FileUtil;
+import com.jbm.game.hall.StartHall;
 import com.jbm.game.message.ServerMessage;
 import com.jbm.game.message.ServerMessage.ServerRegisterRequest;
 import com.jbm.game.model.constant.Config;
@@ -88,6 +89,10 @@ public class HallServer implements Runnable{
 		new Thread(this.hallHttpServer).start();
 		this.hallServerCheckTimer.start();
 		this.hallPubListener.start();
+	}
+	
+	public static HallServer getInstance() {
+		return StartHall.getBydrServer();
 	}
 	
 	/**

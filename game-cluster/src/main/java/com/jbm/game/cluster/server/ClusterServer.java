@@ -37,8 +37,7 @@ public class ClusterServer  implements Runnable{
 		logger.info("ClusterServer::clusterTcpServer::start!");
 		new Thread(clusterTcpServer).start();
 		
-//		ScriptManager.getInstance().init((str) -> SysUtil.exit(this.getClass(), null, "加载脚本错误"));
-		ScriptManager.getInstance().init((str) -> System.out.println("脚本加载完成"));
+		ScriptManager.getInstance().init((str) -> SysUtil.exit(this.getClass(), null, "加载脚本错误"));
 		
 		try {
 			Thread.sleep(1000);

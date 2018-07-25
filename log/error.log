@@ -1,8 +1,32 @@
-2018-07-24 12:54:09 SysUtil.java:41 - [ ERROR ] com.jbm.game.cluster.StartCluster
-2018-07-24 12:54:20 SysUtil.java:41 - [ ERROR ] com.jbm.game.cluster.StartCluster
-2018-07-24 12:55:17 SysUtil.java:41 - [ ERROR ] com.jbm.game.cluster.StartCluster
-2018-07-24 12:56:28 SysUtil.java:41 - [ ERROR ] com.jbm.game.engine.mina.HttpServer$BindServer
-java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8001
+2018-07-25 12:54:08 ScriptPool.java:278 - [ ERROR ] 加载脚本错误: 
+java.lang.IllegalArgumentException: 无效的标记: -sourcepaht
+	at com.sun.tools.javac.api.JavacTool.processOptions(JavacTool.java:206)
+	at com.sun.tools.javac.api.JavacTool.getTask(JavacTool.java:156)
+	at com.sun.tools.javac.api.JavacTool.getTask(JavacTool.java:107)
+	at com.sun.tools.javac.api.JavacTool.getTask(JavacTool.java:64)
+	at com.jbm.game.engine.script.ScriptPool.compile(ScriptPool.java:266)
+	at com.jbm.game.engine.script.ScriptPool.compile(ScriptPool.java:214)
+	at com.jbm.game.engine.script.ScriptPool.loadJava(ScriptPool.java:298)
+	at com.jbm.game.engine.script.ScriptManager.init(ScriptManager.java:51)
+	at com.jbm.game.gate.StartGate.main(StartGate.java:42)
+2018-07-25 12:58:45 ScriptPool.java:151 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:130)
+	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:30)
+	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
+	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$15/1677540518.accept(Unknown Source)
+	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:149)
+	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/987015126.accept(Unknown Source)
+	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
+	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:147)
+	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
+	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
+2018-07-25 13:00:39 TcpServer.java:130 - [ ERROR ] 监听TCP端口:8007已被占用
+2018-07-25 13:00:39 TcpServer.java:130 - [ ERROR ] 监听TCP端口:8003已被占用
+2018-07-25 13:00:39 TcpServer.java:130 - [ ERROR ] 监听TCP端口:8002已被占用
+2018-07-25 13:00:39 TcpServer.java:131 - [ ERROR ] TCP 服务异常
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8007
 original message : Address already in use: bind
 	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
 	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
@@ -13,8 +37,8 @@ original message : Address already in use: bind
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 12:56:36 SysUtil.java:41 - [ ERROR ] com.jbm.game.engine.mina.HttpServer$BindServer
-java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8001
+2018-07-25 13:00:39 TcpServer.java:131 - [ ERROR ] TCP 服务异常
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8003
 original message : Address already in use: bind
 	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
 	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
@@ -25,8 +49,8 @@ original message : Address already in use: bind
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 12:57:14 SysUtil.java:41 - [ ERROR ] com.jbm.game.engine.mina.HttpServer$BindServer
-java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8001
+2018-07-25 13:00:39 SysUtil.java:41 - [ ERROR ] com.jbm.game.engine.mina.HttpServer$BindServer
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8006
 original message : Address already in use: bind
 	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
 	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
@@ -37,298 +61,725 @@ original message : Address already in use: bind
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 13:27:08 SysUtil.java:41 - [ ERROR ] com.jbm.game.cluster.server.ClusterServer
-2018-07-24 13:29:46 SysUtil.java:41 - [ ERROR ] com.jbm.game.cluster.server.ClusterServer
-2018-07-24 17:42:03 JedisPubListener.java:62 - [ ERROR ] 
+2018-07-25 13:00:39 TcpServer.java:131 - [ ERROR ] TCP 服务异常
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:8002
+original message : Address already in use: bind
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:586)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:71)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:454)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 13:00:40 ScriptPool.java:151 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:130)
+	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:30)
+	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
+	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$18/1776811962.accept(Unknown Source)
+	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:149)
+	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/1539827598.accept(Unknown Source)
+	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
+	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:147)
+	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
+	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
+2018-07-25 14:46:05 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, client, /127.0.0.1:29757 => /127.0.0.1:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 17:48:03 JedisPubListener.java:62 - [ ERROR ] 
 redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
 	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
 	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
 	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
 	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
 	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:42:04 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:42:13 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:42:44 JedisPubListener.java:62 - [ ERROR ] 
+2018-07-25 17:51:08 JedisPubListener.java:62 - [ ERROR ] 
 redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
 	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
 	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
 	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
 	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
 	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:42:45 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:42:55 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:43:05 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:43:15 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:43:25 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:43:35 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:43:45 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:43:55 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:44:05 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:44:15 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:44:25 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:44:35 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:44:45 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:44:55 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:45:05 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:45:15 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:45:25 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.RuntimeException: 服务器配置未实现
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:94)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:49)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:45:35 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.ClassCastException: com.jbm.game.engine.mina.config.MinaClientConfig cannot be cast to com.jbm.game.engine.mina.config.MinaServerConfig
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:89)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:50)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:45:49 JedisPubListener.java:62 - [ ERROR ] 
+2018-07-25 17:52:03 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, /127.0.0.1:25797 => 0.0.0.0/0.0.0.0:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 17:56:46 JedisPubListener.java:62 - [ ERROR ] 
 redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
 	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
 	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
 	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
 	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
 	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:45:49 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.ClassCastException: com.jbm.game.engine.mina.config.MinaClientConfig cannot be cast to com.jbm.game.engine.mina.config.MinaServerConfig
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:89)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:50)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:45:59 ScheduledTask.java:72 - [ ERROR ] 定时任务
-java.lang.ClassCastException: com.jbm.game.engine.mina.config.MinaClientConfig cannot be cast to com.jbm.game.engine.mina.config.MinaServerConfig
-	at com.jbm.game.model.timer.GameServerCheckTimer.builderServerReqisterRequit(GameServerCheckTimer.java:89)
-	at com.jbm.game.model.timer.GameServerCheckTimer.executeTask(GameServerCheckTimer.java:50)
-	at com.jbm.game.engine.thread.timer.ScheduledTask$Task.run(ScheduledTask.java:65)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:46:37 JedisPubListener.java:62 - [ ERROR ] 
+2018-07-25 17:58:35 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 18:02:40 JedisPubListener.java:62 - [ ERROR ] 
 redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
 	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
 	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
 	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
 	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
 	at java.lang.Thread.run(Thread.java:745)
-2018-07-24 17:49:07 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000001: nio socket, client, /127.0.0.1:19459 => /127.0.0.1:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 18:02:43 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 18:07:16 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 18:07:45 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, /127.0.0.1:26243 => 0.0.0.0/0.0.0.0:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 19:37:55 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 19:40:10 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 19:41:45 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 19:43:23 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000001: nio socket, client, /127.0.0.1:32739 => /127.0.0.1:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 20:21:06 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:21:31 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 20:34:25 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:36:00 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000001: nio socket, client, /127.0.0.1:22881 => /127.0.0.1:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 20:36:20 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:36:40 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:36:40 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 20:36:50 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:36:50 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 20:37:00 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:37:00 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 20:37:10 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:37:10 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 20:37:20 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:37:20 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 20:37:30 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:37:30 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 20:37:40 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:37:40 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 20:37:50 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:37:50 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 20:38:00 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 20:38:00 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 20:38:04 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000003: nio socket, server, null => 0.0.0.0/0.0.0.0:8003)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 20:38:04 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000005: nio socket, server, null => 0.0.0.0/0.0.0.0:8003)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 20:38:04 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000004: nio socket, server, null => 0.0.0.0/0.0.0.0:8003)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 20:38:04 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 20:38:06 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000003: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 20:38:06 ClusterTcpServer.java:100 - [ ERROR ] 未知游戏服务器断开连接
+2018-07-25 20:40:22 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:17:01 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:17:58 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, /127.0.0.1:24066 => 0.0.0.0/0.0.0.0:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 21:21:35 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:25:25 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:25:25 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:25:35 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:25:35 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:25:45 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:25:45 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:25:55 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:25:55 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:26:05 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:26:05 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:26:15 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:26:15 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:26:25 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:26:25 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:26:35 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:26:35 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:26:35 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000004: nio socket, server, null => 0.0.0.0/0.0.0.0:8003)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 21:26:35 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 21:26:35 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000003: nio socket, server, null => 0.0.0.0/0.0.0.0:8003)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 21:26:35 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000005: nio socket, server, null => 0.0.0.0/0.0.0.0:8003)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 21:27:28 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:27:48 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:27:48 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:27:58 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:27:58 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:28:08 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:28:08 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:28:18 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:28:18 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:28:28 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:28:28 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:28:38 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:28:38 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:28:48 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:28:48 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:28:58 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:28:58 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:29:08 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:29:08 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:29:18 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:29:18 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:29:28 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:29:28 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:29:38 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:29:38 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:29:48 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:29:48 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:29:58 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:29:58 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:30:08 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:30:08 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:30:18 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:30:18 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:30:28 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:30:28 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:30:38 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:30:38 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:30:48 DefaultProtocolHandler.java:114 - [ ERROR ] messageReceived
+java.lang.NullPointerException
+	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
+	at com.jbm.game.gate.server.handler.GateTcpGameServerHandler.forward(GateTcpGameServerHandler.java:45)
+	at com.jbm.game.engine.mina.handler.DefaultProtocolHandler.messageReceived(DefaultProtocolHandler.java:112)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48)
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947)
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74)
+	at org.apache.mina.core.session.IoEvent.run(IoEvent.java:63)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTask(OrderedThreadPoolExecutor.java:770)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.runTasks(OrderedThreadPoolExecutor.java:762)
+	at org.apache.mina.filter.executor.OrderedThreadPoolExecutor$Worker.run(OrderedThreadPoolExecutor.java:704)
+	at java.lang.Thread.run(Thread.java:745)
+2018-07-25 21:30:48 DefaultProtocolHandler.java:116 - [ ERROR ] 尝试按0 移位处理,id:1001
+2018-07-25 21:37:47 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, client, /127.0.0.1:24386 => /127.0.0.1:8000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 21:37:48 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000007: nio socket, server, null => 0.0.0.0/0.0.0.0:8003)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-07-25 21:37:48 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000008: nio socket, server, null => 0.0.0.0/0.0.0.0:8003)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。

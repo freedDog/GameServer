@@ -3,16 +3,19 @@ package com.jbm.game.gate.server;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.jbm.game.engine.mina.config.MinaClientConfig;
 import com.jbm.game.engine.mina.config.MinaServerConfig;
 import com.jbm.game.engine.redis.jedis.JedisManager;
+import com.jbm.game.engine.server.ServerState;
 import com.jbm.game.engine.thread.ThreadPoolExecutorConfig;
 import com.jbm.game.engine.util.FileUtil;
+import com.jbm.game.engine.util.SysUtil;
 import com.jbm.game.gate.StartGate;
+import com.jbm.game.gate.manager.UserSessionManager;
 import com.jbm.game.gate.server.client.Gate2ClusterClient;
 import com.jbm.game.gate.struct.Config;
 import com.jbm.game.gate.struct.GateKey;
+import com.jbm.game.message.ServerMessage.ServerRegisterRequest;
 
 /**
  * 大厅服务器
@@ -116,8 +119,24 @@ public class GateServer implements Runnable{
 	 * 构建服务器更新注册消息
 	 * @param minaServerConfig
 	 */
-	public void buildServerRegisterRequest(MinaServerConfig minaServerConfig) {
-		//TODO 等消息实现了在处理
+	public ServerRegisterRequest buildServerRegisterRequest(MinaServerConfig minaServerConfig) {
+		ServerRegisterRequest.Builder builder=ServerRegisterRequest.newBuilder();
+		com.jbm.game.message.ServerMessage.ServerInfo.Builder info=com.jbm.game.message.ServerMessage.ServerInfo.newBuilder();
+		info.setId(minaServerConfig.getId());
+		info.setIp(minaServerConfig.getIp());
+		info.setMaxUserCount(1000);
+		info.setOnline(UserSessionManager.getInstance().getOnlineCount());
+		info.setName(minaServerConfig.getName());
+		info.setState(ServerState.NORMAL.getState());
+		info.setType(minaServerConfig.getType().getType());
+		info.setWwwip("");
+		info.setPort(minaServerConfig.getPort());
+		info.setHttpport(minaServerConfig.getHttpPort());
+		info.setFreeMemory(SysUtil.freeMemory());
+		info.setVersion(minaServerConfig.getVersion());
+		info.setTotalMemory(SysUtil.totalMemory());
+		builder.setServerInfo(info);
+		return builder.build();
 	}
 
 	public GateTcpUserServer getGateTcpUserServer() {

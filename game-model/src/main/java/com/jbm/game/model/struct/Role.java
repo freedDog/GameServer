@@ -3,6 +3,7 @@ package com.jbm.game.model.struct;
 import org.mongodb.morphia.annotations.Entity;
 
 import com.jbm.game.engine.struct.Person;
+import com.jbm.game.model.redis.key.HallKey;
 
 /**
  * 玩家角色实体
@@ -13,5 +14,12 @@ import com.jbm.game.engine.struct.Person;
 
 @Entity(value="role",noClassnameStored=true)
 public class Role  extends Person{
+	
+	
+	
+	
+	public String getRoleRedisKey() {
+		return HallKey.Role_Map_Info.getKey(this.id);
+	}
 
 }

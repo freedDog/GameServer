@@ -7,6 +7,8 @@ import com.jbm.game.engine.cache.cooldown.Cooldown;
 
 public abstract class Person {
 	
+	protected long id;
+	
 	protected transient Map<String, Cooldown> cooldowns=new HashMap<>();
 
 	public Map<String, Cooldown> getCooldowns() {
