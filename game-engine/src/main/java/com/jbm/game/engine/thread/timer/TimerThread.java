@@ -53,7 +53,7 @@ public class TimerThread extends Timer{
 					Iterator<TimerEvent> it=TimerThread.this.events.iterator();
 					while(it.hasNext()) {
 						TimerEvent event=it.next();
-						if(event.remain()>0L) {
+						if(event.remain()>=0L) {
 							if(event.getLoop()>0) {
 								event.setLoop(event.getLoop()-1);
 								TimerThread.this.serverThread.execute(event);

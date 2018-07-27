@@ -30,12 +30,7 @@ public class StartGate {
 		initConfigPath();
 		
 		//redis
-		JedisClusterConfig jedisClusterConfig=FileUtil.getConfigXML(configPath, "jedisClusterConfig.xml", JedisClusterConfig.class);
-		if(jedisClusterConfig==null) {
-			logger.error("redis 配置{} 未找到",configPath);
-			System.exit(1);
-		}
-		jedisManager=new JedisManager(jedisClusterConfig);
+		jedisManager=new JedisManager(configPath);
 		//创建mongodb连接
 		MongoManager.getInstance().createConnect(configPath);
 		//加载脚本

@@ -11,6 +11,16 @@ public abstract class Person {
 	
 	protected transient Map<String, Cooldown> cooldowns=new HashMap<>();
 
+	
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	public Map<String, Cooldown> getCooldowns() {
 		return cooldowns;
 	}

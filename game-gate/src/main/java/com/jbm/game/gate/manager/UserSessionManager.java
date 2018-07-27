@@ -35,7 +35,7 @@ public class UserSessionManager {
 	
 	public static UserSessionManager getInstance() {
 		if(userSessionManager==null) {
-			synchronized (userSessionManager) {
+			synchronized (UserSessionManager.class) {
 				if(userSessionManager==null) {
 					userSessionManager=new UserSessionManager();
 				}
