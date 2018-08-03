@@ -503,6 +503,9 @@ public final class ScriptPool {
 							HandlerEntity handlerEntity=defineClass.getAnnotation(HandlerEntity.class);
 							if(handlerEntity!=null) {
 								if(TcpHandler.class.isAssignableFrom(defineClass)) {
+									if(defineClass.getName().contains("ServerRegisterResHandler")) {
+										System.out.print("");
+									}
 									tcpHandlerMap.put(handlerEntity.mid(), (Class<? extends IHandler>)defineClass);
 									tcpHandlerEntityMap.put(handlerEntity.mid(), handlerEntity);
 									logger.info("[{}]加载到tcp handler 容器",nameString);

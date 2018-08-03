@@ -1,344 +1,270 @@
-2018-07-27 15:03:16 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 15:03:18 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长110 毫秒，当前命令数0 条
-2018-07-27 15:03:18 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 15:03:29 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 15:03:29 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 15:03:38 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000002: nio socket, server, /127.0.0.1:56155 => /127.0.0.1:9000)
-2018-07-27 15:03:38 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000001: nio socket, client, /127.0.0.1:56155 => /127.0.0.1:9000)
-2018-07-27 15:03:38 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000001: nio socket, client, /127.0.0.1:56155 => /127.0.0.1:9000)
-2018-07-27 15:03:38 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000002: nio socket, server, /127.0.0.1:56155 => /127.0.0.1:9000)
-2018-07-27 15:03:39 ClusterTcpServer.java:106 - [ WARN ] 无法找到消息处理器:msgID1003,bytes[0,0,3,-21,16,1]
-2018-07-27 15:03:48 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:03:48 ServerThread.java:106 - [ WARN ] 线程：全局同步线程ClusterTcpServer 执行 com.jbm.game.cluster.tcp.server.ServerRegisterHandler消耗时间过长146 毫秒，当前命令数0 条
-2018-07-27 15:03:48 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:03:58 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:03:58 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:03:59 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:03:59 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:04:08 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:04:08 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:04:09 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:04:09 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:04:18 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:04:18 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:04:19 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:04:19 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:04:28 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:04:28 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:04:29 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:04:29 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:04:35 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:9000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-2018-07-27 15:04:35 DefaultProtocolHandler.java:61 - [ WARN ] 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:9000) 已经关闭sessionClosed
-2018-07-27 15:07:55 ServerThread.java:106 - [ WARN ] 线程：全局同步线程ClusterTcpServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长52 毫秒，当前命令数0 条
-2018-07-27 15:08:00 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000002: nio socket, server, /127.0.0.1:56304 => /127.0.0.1:9000)
-2018-07-27 15:08:00 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000002: nio socket, server, /127.0.0.1:56304 => /127.0.0.1:9000)
-2018-07-27 15:08:00 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000001: nio socket, client, /127.0.0.1:56304 => /127.0.0.1:9000)
-2018-07-27 15:08:00 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000001: nio socket, client, /127.0.0.1:56304 => /127.0.0.1:9000)
-2018-07-27 15:08:00 ServerThread.java:106 - [ WARN ] 线程：全局同步线程ClusterTcpServer 执行 com.jbm.game.cluster.tcp.server.ServerRegisterHandler消耗时间过长121 毫秒，当前命令数0 条
-2018-07-27 15:08:00 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:08:00 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:08:10 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:08:10 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:08:11 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:08:11 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:08:13 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 15:08:13 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000003: nio socket, server, /127.0.0.1:56388 => /127.0.0.1:9000)
-2018-07-27 15:08:13 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000003: nio socket, server, /127.0.0.1:56388 => /127.0.0.1:9000)
-2018-07-27 15:08:14 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000001: nio socket, client, /127.0.0.1:56388 => /127.0.0.1:9000)
-2018-07-27 15:08:14 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000001: nio socket, client, /127.0.0.1:56388 => /127.0.0.1:9000)
-2018-07-27 15:08:14 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长120 毫秒，当前命令数0 条
-2018-07-27 15:08:20 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:08:20 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:08:21 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:08:21 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:08:30 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:08:30 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:08:31 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:08:31 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:08:33 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:9000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-2018-07-27 15:08:33 DefaultProtocolHandler.java:61 - [ WARN ] 连接(0x00000002: nio socket, server, null => 0.0.0.0/0.0.0.0:9000) 已经关闭sessionClosed
-2018-07-27 15:08:34 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000003: nio socket, server, /127.0.0.1:56388 => 0.0.0.0/0.0.0.0:9000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-2018-07-27 15:08:34 DefaultProtocolHandler.java:61 - [ WARN ] 连接(0x00000003: nio socket, server, null => 0.0.0.0/0.0.0.0:9000) 已经关闭sessionClosed
-2018-07-27 15:08:34 ClusterTcpServer.java:100 - [ ERROR ] 未知游戏服务器断开连接
-2018-07-27 15:18:51 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 15:18:52 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长188 毫秒，当前命令数0 条
-2018-07-27 15:18:52 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 15:18:54 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 15:18:54 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 15:19:04 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 15:19:13 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000002: nio socket, server, /127.0.0.1:56762 => /127.0.0.1:9000)
-2018-07-27 15:19:13 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000002: nio socket, server, /127.0.0.1:56762 => /127.0.0.1:9000)
-2018-07-27 15:19:13 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000001: nio socket, client, /127.0.0.1:56762 => /127.0.0.1:9000)
-2018-07-27 15:19:13 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000001: nio socket, client, /127.0.0.1:56762 => /127.0.0.1:9000)
-2018-07-27 15:19:13 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:19:23 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:19:23 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:19:33 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:19:33 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:19:43 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:19:43 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:19:44 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:19:44 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:19:53 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:19:53 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:19:54 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:19:54 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:20:03 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:20:03 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:20:04 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:20:04 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:20:13 ServerInfo.java:141 - [ WARN ] 服务器:大厅 1服 连接会话为空
-2018-07-27 15:20:13 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 15:20:14 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: :8003
-2018-07-27 15:20:14 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 15:20:18 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000001: nio socket, client, /127.0.0.1:56762 => /127.0.0.1:9000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-2018-07-27 15:20:18 DefaultProtocolHandler.java:61 - [ WARN ] 连接(0x00000001: nio socket, client, 0.0.0.0/0.0.0.0:56762 => /127.0.0.1:9000) 已经关闭sessionClosed
-2018-07-27 15:26:40 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 15:26:41 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长118 毫秒，当前命令数0 条
-2018-07-27 15:26:41 MinaTcpClient.java:106 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 15:42:15 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 15:42:16 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 15:42:55 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$16/649054618.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/2134195609.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 15:42:55 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长163 毫秒，当前命令数0 条
-2018-07-27 15:47:01 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 15:48:01 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长128 毫秒，当前命令数0 条
-2018-07-27 15:48:01 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 15:59:11 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 15:59:16 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长117 毫秒，当前命令数0 条
-2018-07-27 15:59:16 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 16:31:47 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 16:31:52 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 16:32:14 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长22365 毫秒，当前命令数0 条
-2018-07-27 16:36:34 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 16:36:38 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 16:37:02 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长8839 毫秒，当前命令数0 条
-2018-07-27 16:51:37 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 16:51:42 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 16:51:59 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长200 毫秒，当前命令数0 条
-2018-07-27 17:00:04 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 17:00:06 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:00:17 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长147 毫秒，当前命令数0 条
-2018-07-27 17:00:20 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$15/250805081.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/2134195609.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:00:25 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$15/250805081.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/2134195609.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:00:30 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$15/250805081.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/2134195609.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:00:35 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$15/250805081.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/2134195609.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:00:40 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$15/250805081.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/2134195609.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:00:45 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$15/250805081.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/2134195609.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:00:50 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$15/250805081.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/2134195609.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:00:55 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$15/250805081.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/2134195609.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:01:00 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$15/250805081.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/2134195609.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:01:10 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 17:01:11 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长117 毫秒，当前命令数0 条
-2018-07-27 17:01:11 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:01:15 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$16/156938823.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/1187146208.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:01:15 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长32 毫秒，当前命令数0 条
-2018-07-27 17:01:20 ScriptPool.java:147 - [ ERROR ] 执行 IScript:com.jbm.game.engine.script.ITimerEventScript
-java.lang.NullPointerException
-	at com.jbm.game.gate.manager.UserSessionManager.getInstance(UserSessionManager.java:38)
-	at com.jbm.game.gate.server.GateServer.buildServerRegisterRequest(GateServer.java:128)
-	at com.jbm.game.gate.timer.server.UpdateServerInfoScript.secondHandler(UpdateServerInfoScript.java:28)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.lambda$0(ServerHeartTimer.java:42)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer$$Lambda$16/156938823.accept(Unknown Source)
-	at com.jbm.game.engine.script.ScriptPool.lambda$0(ScriptPool.java:145)
-	at com.jbm.game.engine.script.ScriptPool$$Lambda$8/1187146208.accept(Unknown Source)
-	at java.util.concurrent.ConcurrentHashMap$ValuesView.forEach(ConcurrentHashMap.java:4707)
-	at com.jbm.game.engine.script.ScriptPool.executeScripts(ScriptPool.java:143)
-	at com.jbm.game.engine.thread.timer.event.ServerHeartTimer.run(ServerHeartTimer.java:40)
-	at com.jbm.game.engine.thread.ServerThread.run(ServerThread.java:103)
-2018-07-27 17:03:02 ScriptPool.java:521 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
-2018-07-27 17:03:04 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长122 毫秒，当前命令数0 条
-2018-07-27 17:03:04 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:03:06 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:03:06 ServerHeartTimer.java:45 - [ WARN ] 定时脚本[com.jbm.game.gate.timer.server.UpdateServerInfoScript] 执行1030 ms
-2018-07-27 17:03:06 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长1031 毫秒，当前命令数1 条
-2018-07-27 17:03:11 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:03:11 ServerHeartTimer.java:45 - [ WARN ] 定时脚本[com.jbm.game.gate.timer.server.UpdateServerInfoScript] 执行1001 ms
-2018-07-27 17:03:11 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长1001 毫秒，当前命令数1 条
-2018-07-27 17:03:16 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:03:16 ServerHeartTimer.java:45 - [ WARN ] 定时脚本[com.jbm.game.gate.timer.server.UpdateServerInfoScript] 执行1002 ms
-2018-07-27 17:03:16 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长1002 毫秒，当前命令数1 条
-2018-07-27 17:03:19 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:03:19 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:03:21 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:03:21 ServerHeartTimer.java:45 - [ WARN ] 定时脚本[com.jbm.game.gate.timer.server.UpdateServerInfoScript] 执行1001 ms
-2018-07-27 17:03:21 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长1001 毫秒，当前命令数1 条
-2018-07-27 17:03:26 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:03:26 ServerHeartTimer.java:45 - [ WARN ] 定时脚本[com.jbm.game.gate.timer.server.UpdateServerInfoScript] 执行1013 ms
-2018-07-27 17:03:26 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长1013 毫秒，当前命令数1 条
-2018-07-27 17:03:29 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:03:31 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:CLUSTER连接ip: 127.0.0.1:9000
-2018-07-27 17:03:31 ServerHeartTimer.java:45 - [ WARN ] 定时脚本[com.jbm.game.gate.timer.server.UpdateServerInfoScript] 执行1001 ms
-2018-07-27 17:03:31 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长1001 毫秒，当前命令数1 条
-2018-07-27 17:03:36 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000002: nio socket, client, /127.0.0.1:62057 => /127.0.0.1:9000)
-2018-07-27 17:03:37 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000002: nio socket, client, /127.0.0.1:62057 => /127.0.0.1:9000)
-2018-07-27 17:03:37 ServerHeartTimer.java:45 - [ WARN ] 定时脚本[com.jbm.game.gate.timer.server.UpdateServerInfoScript] 执行1106 ms
-2018-07-27 17:03:37 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长1106 毫秒，当前命令数1 条
-2018-07-27 17:03:37 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000002: nio socket, server, /127.0.0.1:62057 => /127.0.0.1:9000)
-2018-07-27 17:03:37 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000002: nio socket, server, /127.0.0.1:62057 => /127.0.0.1:9000)
-2018-07-27 17:03:38 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000003: nio socket, server, /127.0.0.1:62083 => /127.0.0.1:9000)
-2018-07-27 17:03:38 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000003: nio socket, server, /127.0.0.1:62083 => /127.0.0.1:9000)
-2018-07-27 17:03:38 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000001: nio socket, client, /127.0.0.1:62083 => /127.0.0.1:9000)
-2018-07-27 17:03:38 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000001: nio socket, client, /127.0.0.1:62083 => /127.0.0.1:9000)
-2018-07-27 17:03:39 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 17:03:41 ServerHeartTimer.java:45 - [ WARN ] 定时脚本[com.jbm.game.gate.timer.server.UpdateServerInfoScript] 执行106 ms
-2018-07-27 17:03:41 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长107 毫秒，当前命令数0 条
-2018-07-27 17:03:41 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
-2018-07-27 17:03:45 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
-2018-07-27 17:03:48 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 17:03:48 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 17:03:50 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
-2018-07-27 17:03:55 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
-2018-07-27 17:03:58 ServerInfo.java:141 - [ WARN ] 服务器:网关 3服 连接会话为空
-2018-07-27 17:03:58 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 17:03:59 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: 127.0.0.1:8003
-2018-07-27 17:03:59 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 17:04:00 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
-2018-07-27 17:04:05 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
-2018-07-27 17:04:08 ServerInfo.java:141 - [ WARN ] 服务器:网关 3服 连接会话为空
-2018-07-27 17:04:08 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 17:04:09 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: 127.0.0.1:8003
-2018-07-27 17:04:09 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 17:04:10 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
-2018-07-27 17:04:15 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
-2018-07-27 17:04:18 ServerInfo.java:141 - [ WARN ] 服务器:网关 3服 连接会话为空
-2018-07-27 17:04:18 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerRegisterHandler 没有分配线程
-2018-07-27 17:04:19 MinaTcpClient.java:103 - [ WARN ] 失败! 连接到服务器:目标类型:GATE连接ip: 127.0.0.1:8003
-2018-07-27 17:04:19 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.hall.tcp.server.ServerListHandler 没有分配线程
-2018-07-27 17:04:20 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
-2018-07-27 17:04:25 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
-2018-07-27 17:04:26 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000002: nio socket, client, /127.0.0.1:62057 => /127.0.0.1:9000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-2018-07-27 17:04:26 DefaultProtocolHandler.java:61 - [ WARN ] 连接(0x00000002: nio socket, client, 0.0.0.0/0.0.0.0:62057 => /127.0.0.1:9000) 已经关闭sessionClosed
-2018-07-27 17:04:26 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000001: nio socket, client, /127.0.0.1:62083 => /127.0.0.1:9000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
-2018-07-27 17:04:26 DefaultProtocolHandler.java:61 - [ WARN ] 连接(0x00000001: nio socket, client, 0.0.0.0/0.0.0.0:62083 => /127.0.0.1:9000) 已经关闭sessionClosed
+2018-08-03 13:29:20 JedisManager.java:92 - [ WARN ] {} 目录无任何lua脚本
+2018-08-03 13:30:05 JedisManager.java:92 - [ WARN ] {} 目录无任何lua脚本
+2018-08-03 13:30:06 FileUtil.java:147 - [ ERROR ] 文件E:\workspace\game\game-bydr\target\config\配置有误
+java.io.FileNotFoundException: E:\workspace\game\game-bydr\target\config (拒绝访问。)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:131)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:518)
+	at org.simpleframework.xml.core.Persister.read(Persister.java:426)
+	at com.jbm.game.engine.util.FileUtil.getConfigXML(FileUtil.java:145)
+	at com.jbm.game.bydr.server.BydrServer.<init>(BydrServer.java:98)
+	at com.jbm.game.bydr.StartBydr.main(StartBydr.java:35)
+2018-08-03 13:30:06 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-08-03 13:30:07 ServerThread.java:106 - [ WARN ] 线程：全局同步线程Bydr2GateClientNetty 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长35 毫秒，当前命令数0 条
+2018-08-03 13:30:08 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 13:30:09 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 13:30:17 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 13:30:27 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 13:30:37 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 13:32:30 JedisManager.java:92 - [ WARN ] {} 目录无任何lua脚本
+2018-08-03 13:32:31 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-08-03 13:32:33 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 13:32:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 13:32:41 ServerThread.java:106 - [ WARN ] 线程：全局同步线程ClusterTcpServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长47 毫秒，当前命令数0 条
+2018-08-03 13:32:41 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000002: nio socket, server, /127.0.0.1:7148 => /127.0.0.1:9000)
+2018-08-03 13:32:41 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000002: nio socket, server, /127.0.0.1:7148 => /127.0.0.1:9000)
+2018-08-03 13:32:42 ClusterTcpServer.java:106 - [ WARN ] 无法找到消息处理器:msgID1003,bytes[0,0,3,-21,16,1]
+2018-08-03 13:32:51 ServerThread.java:106 - [ WARN ] 线程：全局同步线程ClusterTcpServer 执行 com.jbm.game.cluster.tcp.server.ServerRegisterHandler消耗时间过长117 毫秒，当前命令数0 条
+2018-08-03 13:33:12 ScriptPool.java:524 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.gate.tcp.chat.ChatResHandler$1
+2018-08-03 13:33:13 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000003: nio socket, server, /127.0.0.1:7457 => /127.0.0.1:9000)
+2018-08-03 13:33:13 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000003: nio socket, server, /127.0.0.1:7457 => /127.0.0.1:9000)
+2018-08-03 13:33:13 TcpServer.java:130 - [ ERROR ] 监听TCP端口:9003已被占用
+2018-08-03 13:33:13 TcpServer.java:131 - [ ERROR ] TCP 服务异常
+java.io.IOException: Error while binding on 0.0.0.0/0.0.0.0:9003
+original message : Address already in use: bind
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:238)
+	at org.apache.mina.transport.socket.nio.NioSocketAcceptor.open(NioSocketAcceptor.java:51)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.registerHandles(AbstractPollingIoAcceptor.java:586)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor.access$400(AbstractPollingIoAcceptor.java:71)
+	at org.apache.mina.core.polling.AbstractPollingIoAcceptor$Acceptor.run(AbstractPollingIoAcceptor.java:454)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2018-08-03 13:33:13 DefaultProtocolHandler.java:41 - [ WARN ] 已经创建连接(0x00000002: nio socket, client, /127.0.0.1:7457 => /127.0.0.1:9000)
+2018-08-03 13:33:13 DefaultProtocolHandler.java:48 - [ WARN ] 已经打开连接(0x00000002: nio socket, client, /127.0.0.1:7457 => /127.0.0.1:9000)
+2018-08-03 13:33:14 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长116 毫秒，当前命令数0 条
+2018-08-03 13:33:16 ServerHeartTimer.java:45 - [ WARN ] 定时脚本[com.jbm.game.gate.timer.server.UpdateServerInfoScript] 执行125 ms
+2018-08-03 13:33:16 ServerThread.java:106 - [ WARN ] 线程：全局同步线程GateTcpUserServer 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长125 毫秒，当前命令数0 条
+2018-08-03 13:33:16 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
+2018-08-03 13:33:20 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
+2018-08-03 13:33:25 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
+2018-08-03 13:33:30 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
+2018-08-03 13:33:35 DefaultProtocolHandler.java:127 - [ WARN ] 处理器com.jbm.game.gate.tcp.server.ServerRegisterResHandler 没有分配线程
+2018-08-03 13:33:38 DefaultProtocolHandler.java:81 - [ ERROR ] 连接(0x00000003: nio socket, server, null => 0.0.0.0/0.0.0.0:9000)异常:java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+2018-08-03 13:33:38 DefaultProtocolHandler.java:61 - [ WARN ] 连接(0x00000003: nio socket, server, null => 0.0.0.0/0.0.0.0:9000) 已经关闭sessionClosed
+2018-08-03 13:33:42 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 13:33:52 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:57:18 JedisManager.java:92 - [ WARN ] {} 目录无任何lua脚本
+2018-08-03 15:57:21 ScriptPool.java:524 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.bydr.script.redis.HallRoleDataChangeScript$1
+2018-08-03 15:57:21 ScriptPool.java:524 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.bydr.script.room.EnterRoomScript$1
+2018-08-03 15:57:21 JedisPubListener.java:62 - [ ERROR ] 
+redis.clients.jedis.exceptions.JedisNoReachableClusterNodeException: No reachable node in cluster
+	at redis.clients.jedis.JedisSlotBasedConnectionHandler.getConnection(JedisSlotBasedConnectionHandler.java:57)
+	at redis.clients.jedis.JedisClusterCommand.runWithAnyNode(JedisClusterCommand.java:87)
+	at redis.clients.jedis.JedisCluster.subscribe(JedisCluster.java:1662)
+	at com.jbm.game.engine.redis.jedis.JedisPubListener.run(JedisPubListener.java:59)
+	at java.lang.Thread.run(Thread.java:745)
+2018-08-03 15:57:22 ServerThread.java:106 - [ WARN ] 线程：全局同步线程Bydr2GateClientNetty 执行 com.jbm.game.engine.thread.timer.event.ServerHeartTimer消耗时间过长31 毫秒，当前命令数0 条
+2018-08-03 15:57:23 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:57:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:57:32 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:57:42 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:57:52 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:58:02 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:58:12 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:58:22 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:58:32 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:58:42 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:58:52 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:59:02 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:59:12 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:59:22 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:59:32 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:59:42 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 15:59:52 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:00:02 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:00:12 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:00:22 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:00:32 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:00:42 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:00:52 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:01:02 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:01:12 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:01:22 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:01:32 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:01:42 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:01:52 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:02:02 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:02:12 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:02:20 JedisManager.java:92 - [ WARN ] {} 目录无任何lua脚本
+2018-08-03 16:02:23 ScriptPool.java:524 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.bydr.script.redis.HallRoleDataChangeScript$1
+2018-08-03 16:02:23 ScriptPool.java:524 - [ WARN ] handler[{}] 么有加载脚本:com.jbm.game.bydr.script.room.EnterRoomScript$1
+2018-08-03 16:02:25 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:02:26 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:02:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:02:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:02:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:03:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:03:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:03:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:03:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:03:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:03:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:04:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:04:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:04:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:04:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:04:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:04:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:05:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:05:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:05:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:05:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:05:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:05:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:06:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:06:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:06:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:06:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:06:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:06:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:07:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:07:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:07:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:07:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:07:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:07:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:08:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:08:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:08:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:08:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:08:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:08:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:09:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:09:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:09:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:09:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:09:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:09:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:10:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:10:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:10:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:10:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:10:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:10:55 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:11:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:11:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:11:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:11:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:11:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:11:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:12:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:12:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:12:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:12:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:12:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:12:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:13:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:13:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:13:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:13:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:13:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:13:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:14:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:14:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:14:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:14:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:14:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:14:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:15:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:15:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:15:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:15:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:15:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:15:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:16:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:16:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:16:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:16:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:16:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:16:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:17:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:17:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:17:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:17:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:17:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:17:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:18:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:18:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:18:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:18:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:18:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:18:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:19:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:19:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:19:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:19:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:19:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:19:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:20:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:20:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:20:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:20:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:20:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:20:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:21:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:21:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:21:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:21:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:21:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:21:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:22:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:22:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:22:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:22:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:22:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:22:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:23:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:23:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:23:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:23:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:23:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:23:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:24:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:24:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:24:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:24:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:24:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:24:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:25:05 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:25:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:25:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:25:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:25:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:25:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:26:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:26:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:26:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:26:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:26:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:26:55 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:27:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:27:14 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:27:24 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:27:34 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:27:44 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:27:54 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
+2018-08-03 16:28:04 NettyTcpClient.java:106 - [ ERROR ] 连接[GAME_BYDR]服务器127.0.0.1:9000 失败
