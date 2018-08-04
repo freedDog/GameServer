@@ -42,5 +42,6 @@
     <module>game-hall-scripts</module>
     <module>game-bydr</module>
     <module>game-bydr-scripts</module>
+    <module>game-tool</module>
   </modules>
 </project>
