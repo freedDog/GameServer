@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import com.jbm.game.engine.handler.HandlerEntity;
 import com.jbm.game.engine.handler.TcpHandler;
 import com.jbm.game.engine.server.ServerInfo;
+import com.jbm.game.engine.server.ServerType;
 import com.jbm.game.hall.server.HallServer;
 import com.jbm.game.message.ServerMessage;
 import com.jbm.game.message.Mid.MID;
@@ -44,6 +45,7 @@ public class ServerListHandler extends TcpHandler{
 		list.forEach(info ->{
 			HallServer.getInstance().getHall2GateClient().updateHallServerInfo(info);
 			serverIds.add(info.getId());
+			logger.info("服务器{}_{} 返回列表 ip:{}_port:{}",ServerType.valueof(info.getType()).toString(),info.getId(),info.getIp(),info.getPort());
 		});
 		Map<Integer, ServerInfo> hallServers=HallServer.getInstance().getHall2GateClient().getServers();
 		

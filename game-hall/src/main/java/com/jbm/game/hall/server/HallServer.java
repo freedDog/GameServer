@@ -76,6 +76,8 @@ public class HallServer implements Runnable{
 		
 		this.hallServerCheckTimer=new GameServerCheckTimer(hall2ClusterClient, hall2GateClient, minaClientConfig_gate);
 		
+		this.hallHttpServer = new HallHttpServer(minaServerConfig_http);
+		
 		hallPubListener=new JedisPubListener(HallChannel.getChannels());
 		
 		mqConsumer=new MQConsumer(configPath,"hall");

@@ -2,6 +2,9 @@ package com.jbm.game.cluster.tcp.server;
 
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.jbm.game.cluster.manager.ServerManager;
 import com.jbm.game.engine.handler.HandlerEntity;
 import com.jbm.game.engine.handler.TcpHandler;
@@ -22,6 +25,7 @@ import com.jbm.game.message.ServerMessage.ServerListResponse;
 @HandlerEntity(mid=MID.ServerListReq_VALUE,msg=ServerListRequest.class)
 public class ServerListHandler extends TcpHandler{
 
+	private static final Logger logger=LoggerFactory.getLogger(ServerListHandler.class);
 	@Override
 	public void run() {
 		ServerListRequest req=getMsg();
@@ -33,6 +37,7 @@ public class ServerListHandler extends TcpHandler{
 				servers.forEach((id,info) ->{
 					if(info!=null&&info.getSession()!=null&&info.getSession().isConnected()) {
 						builder.addServerInfo(buildServerInfo(info, infoBuilder));
+						logger.info("服务器{}_{} 返回列表 ip:{}_port:{}",ServerType.valueof(info.getType()).toString(),info.getId(),info.getIp(),info.getPort());
 					}
 				});
 				getSession().write(builder.build());
@@ -45,6 +50,7 @@ public class ServerListHandler extends TcpHandler{
 						s.forEach((id,server) ->{
 							if(server!=null&&server.getSession()!=null&&server.getSession().isConnected()) {
 								builder.addServerInfo(buildServerInfo(server, infoBuilder));
+								logger.info("服务器{}_{} 返回列表 ip:{}_port:{}",ServerType.valueof(server.getType()).toString(),server.getId(),server.getIp(),server.getPort());
 							}
 						});
 					}

@@ -17,11 +17,6 @@
     <spring.version>4.3.8.RELEASE</spring.version>
   </properties>
   <dependencies>
-  	<dependency>
-     	 <groupId>com.jbm.game</groupId>
-   	 	<artifactId>game-engine</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
     		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>

@@ -1,47 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.jbm.game</groupId>
-  <artifactId>game</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
+	<groupId>com.jbm.game</groupId>
+	<artifactId>game</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
-  <name>game</name>
-  <url>http://maven.apache.org</url>
+	<name>game</name>
+	<url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-	<maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
 
-  <dependencies>
-  		<dependency>
+	<dependencies>
+		<dependency>
+			<groupId>game-service-engine</groupId>
+			<artifactId>game-service-engine</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>1.2.34</version>
-	</dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <modules>
-    <module>game-gate</module>
-   	<module>game-engine</module>
-    <module>game-manage</module>
-    <module>game-message</module>
-    <module>game-hall</module>
-    <module>game-model</module>
-    <module>game-cluster</module>
-    <module>game-gate-scripts</module>
-    <module>game-cluster-scripts</module>
-    <module>game-hall-scripts</module>
-    <module>game-bydr</module>
-    <module>game-bydr-scripts</module>
-    <module>game-tool</module>
-  </modules>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<modules>
+		<module>game-gate</module>
+		<module>game-manage</module>
+		<module>game-message</module>
+		<module>game-hall</module>
+		<module>game-model</module>
+		<module>game-cluster</module>
+		<module>game-gate-scripts</module>
+		<module>game-cluster-scripts</module>
+		<module>game-hall-scripts</module>
+		<module>game-bydr</module>
+		<module>game-bydr-scripts</module>
+		<module>game-tool</module>
+	</modules>
+		<build>
+		<finalName>${project.artifactId}-${project.version}</finalName>
+		<plugins>
+			<!-- https://mvnrepository.com/artifact/org.apache.felix/maven-bundle-plugin  pom.xml 配置文件异常报错插件 -->
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

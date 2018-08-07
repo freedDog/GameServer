@@ -28,7 +28,7 @@ public class ServerRegisterHandler extends TcpHandler{
 	public void run() {
 		ServerRegisterRequest req=getMsg();
 		ServerMessage.ServerInfo serverInfo=req.getServerInfo();
-		logger.info("服务器{}_{}注册",ServerType.valueof(serverInfo.getType()).toString(),serverInfo.getId());
+		logger.info("服务器{}_{}注册 ip:{}_port:{}",ServerType.valueof(serverInfo.getType()).toString(),serverInfo.getId(),serverInfo.getIp(),serverInfo.getPort());
 		
 		ServerInfo info=ServerManager.getInstance().registerServer(serverInfo, getSession());
 		ServerRegisterResponse.Builder builder=ServerRegisterResponse.newBuilder();

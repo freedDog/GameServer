@@ -16,7 +16,7 @@ public class NetPort {
 	/** 网关用户Tcp端口 */
 	public static int GATE_USER_PORT = 8002;
 	/** 网关游戏 tcp端口 (固定死) */
-	public static int GATE_GAME_PORT = 8003;
+	public static int GATE_GAME_PORT = 9003;
 	/** 网关用户UPD端口 */
 	public static int GATE_USER_UDP_PORT = 8004;
 	/** 网关用户HTTP端口 */

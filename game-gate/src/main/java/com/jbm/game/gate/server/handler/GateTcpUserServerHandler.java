@@ -28,7 +28,7 @@ public class GateTcpUserServerHandler extends ClientProtocolHandler{
 	private static final Logger logger=LoggerFactory.getLogger(GateTcpUserServerHandler.class);
 	
 	public GateTcpUserServerHandler() {
-		super(0);
+		super(8);
 	}
 	
 	public GateTcpUserServerHandler(Service<MinaServerConfig> service) {
