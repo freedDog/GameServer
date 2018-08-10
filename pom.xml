@@ -37,7 +37,6 @@
 	</dependencies>
 	<modules>
 		<module>game-gate</module>
-		<module>game-manage</module>
 		<module>game-message</module>
 		<module>game-hall</module>
 		<module>game-model</module>
