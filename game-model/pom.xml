@@ -6,11 +6,9 @@
   <parent>
     <groupId>com.jbm.game</groupId>
     <artifactId>game</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>releases</version>
   </parent>
-  <groupId>com.jbm.game</groupId>
   <artifactId>game-model</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>game-model</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -20,13 +18,49 @@
 		<dependency>
 			<groupId>com.jbm.game</groupId>
 			<artifactId>game-message</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
+  	<profiles>
+		<profile>
+			<id>JBM</id>
+			<build>
+				<plugins>
+					<!-- 自定义插件 -->
+					<plugin>
+						<groupId>com.jbm.game</groupId>
+						<artifactId>game-maven-plugin</artifactId>
+						<version>releases</version>
+						<configuration>
+							<!-- 该目录 entity目录实体自动生成mongo dao -->
+							<entityPath>/com/jbm/game/model/mongo</entityPath>
+						</configuration>
+						<executions>
+							<!-- 生成配置文件实体类 -->
+							<execution>
+								<configuration>
+									<!-- 实体类生成路径 -->
+									<entityPackage>\com\jbm\game\model\mongo\bydr\entity</entityPackage>
+									<!-- 配置表路径 -->
+									<configTablePath>E:\workspace\game\game-config\src\main\resources\table</configTablePath>
+								</configuration>
+								<id>mongoEntity</id>
+								<goals>
+									<goal>mongoEntity</goal>
+								</goals>
+							</execution>
+
+							<!-- 生成配置文件dao -->
+							<execution>
+								<id>mongoDao</id>
+								<goals>
+									<goal>mongoDao</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>

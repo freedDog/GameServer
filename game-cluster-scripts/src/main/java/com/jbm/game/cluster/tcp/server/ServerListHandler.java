@@ -37,26 +37,26 @@ public class ServerListHandler extends TcpHandler{
 				servers.forEach((id,info) ->{
 					if(info!=null&&info.getSession()!=null&&info.getSession().isConnected()) {
 						builder.addServerInfo(buildServerInfo(info, infoBuilder));
-						logger.info("服务器{}_{} 返回列表 ip:{}_port:{}",ServerType.valueof(info.getType()).toString(),info.getId(),info.getIp(),info.getPort());
-					}
-				});
-				getSession().write(builder.build());
-			}else {
-				//只获取游戏服务器，大厅服(网关服需要获取大厅+所有游戏服务器信息)
-				ServerListResponse.Builder builder=ServerListResponse.newBuilder();
-				ServerMessage.ServerInfo.Builder infoBuilder=ServerMessage.ServerInfo.newBuilder();
-				ServerManager.getInstance().getServers().forEach((serverType,s)->{
-					if(serverType.getType()>100||serverType==ServerType.HALL) {
-						s.forEach((id,server) ->{
-							if(server!=null&&server.getSession()!=null&&server.getSession().isConnected()) {
-								builder.addServerInfo(buildServerInfo(server, infoBuilder));
-								logger.info("服务器{}_{} 返回列表 ip:{}_port:{}",ServerType.valueof(server.getType()).toString(),server.getId(),server.getIp(),server.getPort());
-							}
-						});
+						logger.info("服务器{}_{} 返回列表 ip:{}_port:{},请求类型{}",ServerType.valueof(info.getType()).toString(),info.getId(),info.getIp(),info.getPort(),req.getServerType());
 					}
 				});
 				getSession().write(builder.build());
 			}
+		}else {
+			//只获取游戏服务器，大厅服(网关服需要获取大厅+所有游戏服务器信息)
+			ServerListResponse.Builder builder=ServerListResponse.newBuilder();
+			ServerMessage.ServerInfo.Builder infoBuilder=ServerMessage.ServerInfo.newBuilder();
+			ServerManager.getInstance().getServers().forEach((serverType,s)->{
+				if(serverType.getType()>100||serverType==ServerType.HALL) {
+					s.forEach((id,server) ->{
+						if(server!=null&&server.getSession()!=null&&server.getSession().isConnected()) {
+							builder.addServerInfo(buildServerInfo(server, infoBuilder));
+							logger.info("服务器{}_{} 返回列表 ip:{}_port:{},请求类型{}",ServerType.valueof(server.getType()).toString(),server.getId(),server.getIp(),server.getPort(),req.getServerType());
+						}
+					});
+				}
+			});
+			getSession().write(builder.build());
 		}
 	}
 	

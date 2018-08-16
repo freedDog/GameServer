@@ -7,11 +7,9 @@
 	<parent>
 		<groupId>com.jbm.game</groupId>
 		<artifactId>game</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>releases</version>
 	</parent>
-	<groupId>com.jbm.game</groupId>
 	<artifactId>game-gate</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<name>game-gate</name>
 	<url>http://maven.apache.org</url>
 	<properties>
@@ -23,18 +21,132 @@
 		<dependency>
 			<groupId>com.jbm.game</groupId>
 			<artifactId>game-message</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.jbm.game</groupId>
 			<artifactId>game-model</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.jbm.game.gate.StartGate</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.0.0</version>
+				<executions>
+					<execution>
+						<id>copy</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>
+								${project.build.directory}/lib
+							</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/config</outputDirectory>
+							<resources>
+								<resource>
+									<directory>config_local</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+		<filters>
+			<filter>
+                src/main/resources/Filter/LOCAL_DEFAULT.properties
+            </filter>
+		</filters>
+		<resources>
+			<!-- 过滤配置资源,未使用过滤替换，证书文件不能过滤，否则加载证书报错  -->
+			<resource>
+				<directory>src/main/resources/</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>Filter/*</exclude>
+				</excludes>
+			</resource>
+		</resources>
+	</build>
+
+
+	<profiles>
+		<profile>
+			<id>JBM</id>
+			<build>
+				<filters>
+					<filter>
+                        src/main/resources/Filter/LOCAL_JBM.properties
+                    </filter>
+				</filters>
+			</build>
+		</profile>
+		<profile>
+			<id>LOCAL_TEST1</id>
+			<build>
+				<filters>
+					<filter>
+                        src/main/resources/Filter/LOCAL_TEST1.properties
+                    </filter>
+				</filters>
+				<resources>
+					<!-- 过滤配置资源 -->
+					<resource>
+						<directory>src/main/resources/</directory>
+						<filtering>true</filtering>
+						<excludes> <!--不过滤的资源文件 -->
+							<exclude>Filter/*</exclude>
+						</excludes>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<profile>
+			<id>LOCAL_TEST2</id>
+			<build>
+				<filters>
+					<filter>
+                        src/main/resources/Filter/LOCAL_TEST2.properties
+                    </filter>
+				</filters>
+			</build>
+		</profile>
+	</profiles>
 </project>

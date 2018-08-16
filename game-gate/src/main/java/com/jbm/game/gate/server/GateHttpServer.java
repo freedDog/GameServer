@@ -18,7 +18,6 @@ public class GateHttpServer extends GameHttpSevice{
 	@Override
 	protected void running() {
 		super.running();
-		//添加关服、脚本加载 等公用 handler;
-		
+		// 添加关服、脚本加载 等公用 handler
 	}
 }

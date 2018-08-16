@@ -5,7 +5,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.jbm.game.engine.mina.config.MinaClientConfig;
 import com.jbm.game.engine.mina.config.MinaServerConfig;
-import com.jbm.game.engine.redis.jedis.JedisManager;
 import com.jbm.game.engine.server.ServerState;
 import com.jbm.game.engine.thread.ThreadPoolExecutorConfig;
 import com.jbm.game.engine.util.FileUtil;

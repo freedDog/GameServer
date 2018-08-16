@@ -48,7 +48,7 @@ public class Hall2GateClient extends MutilMinaTcpClientService{
 		ServerInfo serverInfo=serverMap.get(info.getId());
 		if(serverInfo==null) {
 			serverInfo=getServerInfo(info);
-			addTcpClient(serverInfo, NetPort.GATE_GAME_PORT,new MutilTcpProtocolHandler(serverInfo, this));
+			addTcpClient(serverInfo, NetPort.GATE_GAME_PORT,new MutilConHallHandler(serverInfo, this));
 		}else {
 			serverInfo.setIp(info.getIp());
 			serverInfo.setId(info.getId());

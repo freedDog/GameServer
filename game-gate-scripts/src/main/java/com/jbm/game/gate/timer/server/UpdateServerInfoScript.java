@@ -35,6 +35,7 @@ public class UpdateServerInfoScript implements ITimerEventScript{
 			ServerListRequest.Builder builder=ServerListRequest.newBuilder();
 			builder.setServerType(ServerType.GAME.getType());
 			GateServer.getInstance().getClusterClient().sendMsg(builder.build());
+			logger.info("网关请求服务器列表");
 			
 		}
 	}
